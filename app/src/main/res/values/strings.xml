@@ -10,4 +10,18 @@
     <string name="register">Зарегистрироваться</string>
     <string name="login">Войти</string>
     <string name="have_account">Есть аккаунт ?</string>
+    <string name="reg_title">Регистрация</string>
+    <string name="reg_step1">Продолжить</string>
+    <string name="forget_password">Забыли пароль ?</string>
+    <string name="name">Имя</string>
+    <string name="surname">Фамилия</string>
+    <string name="midname">Отчество</string>
+    <string name="city">Город</string>
+    <string name="age">Возраст</string>
+    <string name="weight">Вес</string>
+    <string name="phone">Номер телефона</string>
+    <string name="contacts">Контакты родственников</string>
+    <string name="dis">Хронические заболевания</string>
+    <string name="drugs">Принимаемые препараты</string>
+    <string name="doc_contacts">Контакты лечащего врача</string>
 </resources>
