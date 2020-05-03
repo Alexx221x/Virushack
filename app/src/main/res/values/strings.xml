@@ -1,5 +1,8 @@
 <resources>
-    <string name="app_name">HopeLife</string>
+    <string name="app_name" translatable="false">HopeLife</string>
+    <string name="email" translatable="false">E-mail</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
     <string name="email_hint">email</string>
     <string name="password_hint">password</string>
     <string name="personal_data">Я согласен на обработку персональных даннных</string>

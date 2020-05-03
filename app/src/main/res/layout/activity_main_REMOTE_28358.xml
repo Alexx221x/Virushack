@@ -21,13 +21,13 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="120dp"
             android:fontFamily="@font/ubuntu_medium"
             android:padding="10dp"
-            android:text="HopeLife"
+            android:text="@string/app_name"
+            android:textAlignment="center"
             android:textColor="@color/main"
             android:textSize="64sp" />
 
@@ -35,64 +35,33 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="56dp"
             android:background="#7AE8E7E7"
-            android:fontFamily="@font/ubuntu_medium"
-            android:hint="email"
+            android:fontFamily="@font/open_sans"
+            android:hint="@string/email"
             android:inputType="textEmailAddress"
             android:padding="10dp" />
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="password"
-            android:inputType="textPassword"
+            android:layout_marginTop="24dp"
             android:background="#7AE8E7E7"
-            android:padding="10dp"/>
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:padding="10dp" />
 
         <Button
-            android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="36dp"
             android:background="@drawable/button"
+            android:fontFamily="@font/ubuntu"
+            android:text="@string/sign_in"
             android:textColor="@color/light"
-            android:text="Войти" />
-
-        <TextView
-            android:layout_marginTop="16dp"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Забыли пароль ?"
-            android:textColor="@color/main"/>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="20dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="100dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Нет аккаунта ?"
-                android:padding="10dp"/>
-            <TextView
-                android:id="@+id/reg"
-                android:padding="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Зарегистрироваться"
-                android:textColor="@color/main"/>
-        </LinearLayout>
+            android:textSize="16sp" />
 
 
     </LinearLayout>
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
