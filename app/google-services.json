@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "750359057915",
+    "firebase_url": "https://hopelife-8e255.firebaseio.com",
+    "project_id": "hopelife-8e255",
+    "storage_bucket": "hopelife-8e255.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:750359057915:android:953d29756fd3c6cb13e75e",
+        "android_client_info": {
+          "package_name": "org.sk.hopelife"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "750359057915-a2j7b97qcgcvit6ae6qqkbgovmgb53a7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADbj8Q28qBrijM88b5R579g7YX3HJGom0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "750359057915-a2j7b97qcgcvit6ae6qqkbgovmgb53a7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

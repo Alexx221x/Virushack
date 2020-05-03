@@ -24,4 +24,10 @@
     <string name="dis">Хронические заболевания</string>
     <string name="drugs">Принимаемые препараты</string>
     <string name="doc_contacts">Контакты лечащего врача</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="course">Длительность курса</string>
+    <string name="drug">Препарат</string>
+    <string name="phone2">Телефон</string>
 </resources>

@@ -6,156 +6,207 @@
     android:layout_height="match_parent"
     tools:context=".Form3Activity">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="32dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/app_name"
-            android:textColor="@color/main"
-            android:textSize="48sp" />
 
         <LinearLayout
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/contacts"
-                    android:textColor="@color/main"
-                    android:layout_gravity="center_vertical"/>
-
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="100dp"
-                    android:layout_alignParentEnd="true"
-                    android:background="@drawable/ic_add"/>
-
-            </RelativeLayout>
-
-            <ListView
-                android:id="@+id/rel"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-
-
-        </LinearLayout>
-
-        <LinearLayout
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="32dp"
             android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:isScrollContainer="true">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/doc_contacts"
+                android:layout_gravity="center"
+                android:text="@string/app_name"
                 android:textColor="@color/main"
-                android:layout_gravity="center_vertical"/>
+                android:textSize="48sp" />
 
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <RelativeLayout
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:id="@+id/linear"
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/contacts"
+                        android:textColor="@color/main"
+                        android:layout_gravity="center_vertical"/>
+
+                    <ImageButton
+                        android:id="@+id/plus_rel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="100dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/ic_add"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/dis"
+                    android:text="@string/doc_contacts"
                     android:textColor="@color/main"
                     android:layout_gravity="center_vertical"/>
 
-                <ImageButton
-                    android:layout_width="wrap_content"
+                <RelativeLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="100dp"
-                    android:layout_alignParentEnd="true"
-                    android:background="@drawable/ic_add"/>
+                    android:orientation="horizontal">
 
-            </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/name"
+                        android:textSize="16sp"
+                        android:layout_alignParentBottom="true"/>
 
-            <ListView
-                android:id="@+id/dis"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="100dp"
+                        android:id="@+id/name1"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/phone2"
+                        android:textSize="16sp"
+                        android:paddingEnd="20dp"
+                        android:layout_alignParentBottom="true"
+                        tools:ignore="RtlSymmetry" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="100dp"
+                        android:inputType="phone"
+                        android:id="@+id/phone1"/>
+
+                </RelativeLayout>
 
 
-        </LinearLayout>
+            </LinearLayout>
 
-        <LinearLayout
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <RelativeLayout
+            <LinearLayout
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
-                <TextView
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dis"
+                        android:textColor="@color/main"
+                        android:layout_gravity="center_vertical"/>
+
+                    <ImageButton
+                        android:id="@+id/plus_dis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="100dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/ic_add"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_dis"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/drugs"
-                    android:textColor="@color/main"
-                    android:layout_gravity="center_vertical"/>
+                    android:orientation="vertical"/>
 
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="100dp"
-                    android:layout_alignParentEnd="true"
-                    android:background="@drawable/ic_add"/>
 
-            </RelativeLayout>
+            </LinearLayout>
 
-            <ListView
-                android:id="@+id/drugs"
+            <LinearLayout
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/linear_drug">
 
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/drugs"
+                        android:textColor="@color/main"
+                        android:layout_gravity="center_vertical"/>
+
+                    <ImageButton
+                        android:id="@+id/plus_drug"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="100dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/ic_add"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/button"
+                android:text="@string/reg_step1"
+                android:textSize="12sp"
+                android:textColor="@color/light"
+                android:id="@+id/next"
+                android:layout_marginBottom="40dp"
+                />
 
         </LinearLayout>
-
-        <Button
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@drawable/button"
-            android:text="@string/reg_step1"
-            android:textSize="12sp"
-            android:textColor="@color/light"
-            android:id="@+id/next"/>
-
-    </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -40,7 +40,8 @@
             android:fontFamily="@font/ubuntu_medium"
             android:hint="@string/email_hint"
             android:inputType="textEmailAddress"
-            android:padding="10dp" />
+            android:padding="10dp"
+            android:id="@+id/email"/>
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_marginTop="16dp"
@@ -49,9 +50,11 @@
             android:hint="@string/password_hint"
             android:inputType="textPassword"
             android:background="@drawable/text_input"
-            android:padding="10dp"/>
+            android:padding="10dp"
+            android:id="@+id/password"/>
 
         <Button
+            android:id="@+id/next"
             android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
