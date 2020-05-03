@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">HopeLife</string>
+    <string name="email_hint">email</string>
+    <string name="password_hint">password</string>
+    <string name="personal_data">Я согласен на обработку персональных даннных</string>
+    <string name="no_account">Нет аккаунта ?</string>
+    <string name="register">Зарегистрироваться</string>
+    <string name="login">Войти</string>
+    <string name="have_account">Есть аккаунт ?</string>
 </resources>
