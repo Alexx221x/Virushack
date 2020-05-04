@@ -9,7 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".COVIDTestAcrivity"></activity>
+        <activity android:name=".CreateRecordActivity"></activity>
+        <activity android:name=".DiaryActivity" />
+
+        <service
+            android:name=".DoTestService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <activity android:name=".COVIDinfoActivity" />
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".conditions.EmergancyRedActivity" />
+        <activity android:name=".conditions.EmergancyYellowActivity" />
+        <activity android:name=".conditions.RecomendationActivity" />
+        <activity android:name=".conditions.GoodActivity" />
+        <activity android:name=".TestActivity" />
+        <activity android:name=".COVIDTestAcrivity" />
         <activity android:name=".Form3Activity" />
         <activity android:name=".Form2Actvity" />
         <activity android:name=".RegisterActivity" />

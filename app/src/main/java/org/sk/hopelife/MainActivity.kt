@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -33,7 +34,7 @@ class MainActivity : AppCompatActivity() {
             auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
-                        val intent = Intent(this, COVIDTestAcrivity::class.java).apply {
+                        val intent = Intent(this, MenuActivity::class.java).apply {
                             flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
                         }
                         startActivity(intent)
@@ -41,10 +42,7 @@ class MainActivity : AppCompatActivity() {
                     } else {
 
                         Toast.makeText(baseContext, "Authentication failed.", Toast.LENGTH_SHORT).show()
-                        // ...
                     }
-
-                    // ...
                 }
         }
 
@@ -55,7 +53,7 @@ class MainActivity : AppCompatActivity() {
         super.onStart()
         val currentUser = auth.currentUser
         if (currentUser != null){
-            val intent = Intent(this, COVIDTestAcrivity::class.java).apply {
+            val intent = Intent(this, MenuActivity::class.java).apply {
                 flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
             }
             startActivity(intent)

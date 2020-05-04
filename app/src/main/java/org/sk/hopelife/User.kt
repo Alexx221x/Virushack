@@ -12,5 +12,7 @@ class User(
     val relativies: ArrayList<ArrayList<String>>?,
     val disies: ArrayList<String>?,
     val drugs: ArrayList<ArrayList<String>>?,
-    val doctor: MutableMap<String, String>?
+    val doctor: MutableMap<String, String>?,
+    val presure: Int?,
+    val freq: Int?
 )

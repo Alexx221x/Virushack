@@ -30,4 +30,25 @@
     <string name="course">Длительность курса</string>
     <string name="drug">Препарат</string>
     <string name="phone2">Телефон</string>
+
+    <string name="description">Это тест необходим для того чтобы блаблабла бла бла блабла бла. По результатам этого теста блабла блаблабла.</string>
+    <string name="thanks">Спасибо за прохождение теста. Результаты сохранены</string>
+    <string name="recomendation">Рекомендуется проконсультироваться с врачом </string>
+    <string name="eyellow">Необходим вызов врача на дом</string>
+    <string name="ered">Необходима срочная госпитализация</string>
+    <string name="call">Звонок 📞</string>
+    <string name="coution">Нужен уход за пациентом</string>
+    <string name="presure">Нормальное давление</string>
+    <string name="freq">Нормальная частота сердцебиения</string>
+    <string name="covid_19">Информация о COVID-19</string>
+    <string name="timers">Таймеры</string>
+    <string name="diaries">Дневники</string>
+    <string name="care">Уход за пациентом</string>
+    <string name="covid">COVID-19</string>
+    <string name="disinfaction">Дезинфекция помещения</string>
+    <string name="products">Дезинфекция продуктов питания</string>
+    <string name="street">Правильный выход на улицу</string>
+    <string name="date">Дата:</string>
+    <string name="temp">Температура</string>
+    <string name="pres">Давление</string>
 </resources>

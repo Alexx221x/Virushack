@@ -2,6 +2,7 @@ package org.sk.hopelife
 
 import android.content.DialogInterface
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -94,11 +95,17 @@ class Form3Activity : AppCompatActivity() {
                     "phone" to findViewById<TextInputEditText>(R.id.phone1).text.toString()
                 )
 
+                val presure = findViewById<TextInputEditText>(R.id.presure).text.toString().toInt()
+                val freq = findViewById<TextInputEditText>(R.id.frequency).text.toString().toInt()
+
+                val show: Boolean = findViewById<CheckBox>(R.id.check).isChecked
+                saveState(show)
+
                 val info = intent.extras?.get("info") as ArrayList<Any>
 
                 val user = User(info[0].toString(), info[1].toString(), info[2].toString(), info[3].toString(),
                                 info[4].toString().toInt(), info[5].toString().toInt(), info[6].toString(), info[7].toString(),
-                                relativies, disies, drugs, doctor)
+                                relativies, disies, drugs, doctor, presure, freq)
 
                 JSONHelper.loadUserToFireBase(user)
 
@@ -127,10 +134,18 @@ class Form3Activity : AppCompatActivity() {
     fun checkAll(): Boolean{
         val f = findViewById<TextInputEditText>(R.id.name).text.isNullOrEmpty()
         val s = findViewById<TextInputEditText>(R.id.phone).text.isNullOrEmpty()
-        if (counter == 0 || f or s){
+        val t = findViewById<TextInputEditText>(R.id.presure).text.isNullOrEmpty()
+        val fo = findViewById<TextInputEditText>(R.id.frequency).text.isNullOrEmpty()
+
+        if (counter == 0 || f or s or t or fo){
             Toast.makeText(this, "Пожалуйста, заполните все поля.", Toast.LENGTH_LONG).show()
             return false
         }
         return true
+    }
+
+    fun saveState(state: Boolean){
+        val sharedPref: SharedPreferences = getSharedPreferences("state", 0)
+        sharedPref.edit().putBoolean("show", state).apply()
     }
 }
