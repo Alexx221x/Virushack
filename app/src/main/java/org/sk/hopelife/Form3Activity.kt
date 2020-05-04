@@ -107,7 +107,7 @@ class Form3Activity : AppCompatActivity() {
                                 info[4].toString().toInt(), info[5].toString().toInt(), info[6].toString(), info[7].toString(),
                                 relativies, disies, drugs, doctor, presure, freq)
 
-                JSONHelper.loadUserToFireBase(user)
+                    JSONHelper.loadUserToFireBase(user)
 
                 val intent = Intent(this, COVIDTestAcrivity::class.java).apply {
                     flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
@@ -132,8 +132,8 @@ class Form3Activity : AppCompatActivity() {
     }
 
     fun checkAll(): Boolean{
-        val f = findViewById<TextInputEditText>(R.id.name).text.isNullOrEmpty()
-        val s = findViewById<TextInputEditText>(R.id.phone).text.isNullOrEmpty()
+        val f = findViewById<TextInputEditText>(R.id.name1).text.isNullOrEmpty()
+        val s = findViewById<TextInputEditText>(R.id.phone1).text.isNullOrEmpty()
         val t = findViewById<TextInputEditText>(R.id.presure).text.isNullOrEmpty()
         val fo = findViewById<TextInputEditText>(R.id.frequency).text.isNullOrEmpty()
 
