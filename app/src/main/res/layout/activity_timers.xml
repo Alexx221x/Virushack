@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TimersActivity">
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center|center_vertical"
+            android:text="@string/app_name"
+            android:textColor="@color/main"
+            android:textSize="32sp" />
+
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/timers"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/eat"
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Прием пищи"
+            android:background="@drawable/text_input"
+            android:textSize="20sp"
+            android:textColor="@color/dark"
+            android:gravity="center"
+            android:padding="10dp"
+            />
+        <TextView
+            android:id="@+id/drugs"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Прием препартов"
+            android:background="@drawable/text_input"
+            android:textSize="20sp"
+            android:textColor="@color/dark"
+            android:gravity="center"
+            android:padding="10dp"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/prev"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_blank"
+        android:text="Назад"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="40dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

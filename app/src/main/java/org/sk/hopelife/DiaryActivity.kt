@@ -51,7 +51,9 @@ class DiaryActivity : AppCompatActivity() {
                     override fun onDataChange(p0: DataSnapshot) {
                         val date = p0.child("date").value.toString()
                         val desc = p0.child("desc").value.toString()
-                        items.add(arrayListOf(desc, date))
+                        val temp = p0.child("temp").value.toString()
+                        val pres = p0.child("presure").value.toString()
+                        items.add(arrayListOf(desc, date, temp, pres))
                         adapter.notifyDataSetChanged()
                     }
 

@@ -132,8 +132,8 @@ class Form3Activity : AppCompatActivity() {
     }
 
     fun checkAll(): Boolean{
-        val f = findViewById<TextInputEditText>(R.id.name).text.isNullOrEmpty()
-        val s = findViewById<TextInputEditText>(R.id.phone).text.isNullOrEmpty()
+        val f = findViewById<TextInputEditText>(R.id.name1).text.isNullOrEmpty()
+        val s = findViewById<TextInputEditText>(R.id.phone1).text.isNullOrEmpty()
         val t = findViewById<TextInputEditText>(R.id.presure).text.isNullOrEmpty()
         val fo = findViewById<TextInputEditText>(R.id.frequency).text.isNullOrEmpty()
 

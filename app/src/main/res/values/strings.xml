@@ -51,4 +51,18 @@
     <string name="date">Дата:</string>
     <string name="temp">Температура</string>
     <string name="pres">Давление</string>
+    <string name="diet_type">Тип диеты</string>
+
+
+    <string name="diet1">&lt;a href=https://supercook.ru/cur-diet/cur-diet-02.html>Описание диеты&lt;/a></string>
+    <string name="diet2">&lt;a href=https://supercook.ru/cur-diet/cur-diet-05.html>Описание диеты&lt;/a></string>
+    <string name="diet3">&lt;a href=https://supercook.ru/cur-diet/cur-diet-06.html>Описание диеты&lt;/a></string>
+    <string name="diet4">&lt;a href=https://supercook.ru/cur-diet/cur-diet-07.html>Описание диеты&lt;/a></string>
+    <string name="diet5">&lt;a href=https://supercook.ru/cur-diet/cur-diet-10.html>Описание диеты&lt;/a></string>
+    <string name="diet6">&lt;a href=https://supercook.ru/cur-diet/cur-diet-13.html>Описание диеты&lt;/a></string>
+    <string name="diet7">&lt;a href=https://supercook.ru/cur-diet/cur-diet-14.html>Описание диеты&lt;/a></string>
+    <string name="diet8">&lt;a href=https://supercook.ru/cur-diet/cur-diet-18.html>Описание диеты&lt;/a></string>
+    <string name="diet9">&lt;a href=https://supercook.ru/cur-diet/cur-diet-19.html>Описание диеты&lt;/a></string>
+    <string name="diet10">&lt;a href=https://supercook.ru/cur-diet/cur-diet-20.html>Описание диеты&lt;/a></string>
+
 </resources>

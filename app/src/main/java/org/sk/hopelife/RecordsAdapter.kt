@@ -1,6 +1,7 @@
 package org.sk.hopelife
 
 import android.content.Context
+import android.content.Intent
 import android.icu.util.ValueIterator
 import android.util.Log
 import android.view.LayoutInflater
@@ -36,6 +37,17 @@ class RecordsAdapter(var items: ArrayList<ArrayList<String>>, val context: Conte
                 pos = position
                 notifyDataSetChanged()
                 return@setOnLongClickListener true
+            }
+
+            raw.setOnClickListener {
+                val intent = Intent(context, ShowRecord::class.java).apply {
+                    putExtra("date", items[position][1])
+                    putExtra("desc", items[position][0])
+                    putExtra("temp", items[position][2])
+                    putExtra("pres", items[position][3])
+                }
+
+                context.startActivity(intent)
             }
 
         }else{

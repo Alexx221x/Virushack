@@ -32,7 +32,9 @@ class MenuActivity : AppCompatActivity(), View.OnClickListener {
             R.id.covid_info -> {
                 intent = Intent(this, COVIDinfoActivity::class.java)
             }
-            R.id.timers -> {}
+            R.id.timers -> {
+                intent = Intent(this, TimersActivity::class.java)
+            }
             R.id.diary -> {
                 intent = Intent(this, DiaryActivity::class.java)
             }

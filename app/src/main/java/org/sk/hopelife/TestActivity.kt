@@ -188,7 +188,7 @@ class TestActivity : AppCompatActivity() {
         question = findViewById(R.id.question)
         progress = findViewById(R.id.progress)
 
-        
+
         val questions = test["questions"] as ArrayList<MutableMap<String, Any>>
         all = questions.size
         val text = questions[num].get("text").toString()

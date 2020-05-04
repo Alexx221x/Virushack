@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CreateRecordActivity"></activity>
+        <activity android:name=".SetDietActivity"></activity>
+        <activity android:name=".TimersActivity" />
+        <activity android:name=".ShowRecord" />
+        <activity android:name=".CreateRecordActivity" />
         <activity android:name=".DiaryActivity" />
 
         <service
