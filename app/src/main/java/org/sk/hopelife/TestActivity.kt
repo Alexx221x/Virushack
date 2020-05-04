@@ -17,12 +17,17 @@ import org.sk.hopelife.conditions.EmergancyRedActivity
 import org.sk.hopelife.conditions.EmergancyYellowActivity
 import org.sk.hopelife.conditions.GoodActivity
 import org.sk.hopelife.conditions.RecomendationActivity
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 
 class TestActivity : AppCompatActivity() {
 
-
+    val API_HOST = "http://hopelife.rugrisser.ru/"
     val test = mutableMapOf(
         "sid" to "covid19",
         "name" to "COVID-19",
@@ -188,7 +193,35 @@ class TestActivity : AppCompatActivity() {
         question = findViewById(R.id.question)
         progress = findViewById(R.id.progress)
 
+        val retrofit = Retrofit.Builder()
+            .baseUrl(API_HOST)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
 
+        val service = retrofit.create(SurveyService::class.java)
+        val call = service.get(dis)
+
+        call.enqueue(object : Callback<SurveyResponse> {
+            override fun onFailure(call: Call<SurveyResponse>, t: Throwable) {
+                Log.d("Status", "ERROR")
+                goToMenuActivity()
+            }
+
+            override fun onResponse(
+                call: Call<SurveyResponse>,
+                response: Response<SurveyResponse>
+            ) {
+                if (response.code() == 200) {
+                    // получаем объект
+                    Log.d("Status", "OK 200")
+                } else {
+                    Log.d("Status", "NOT FOUND 404")
+                    goToMenuActivity()
+                }
+            }
+
+        })
+        
         val questions = test["questions"] as ArrayList<MutableMap<String, Any>>
         all = questions.size
         val text = questions[num].get("text").toString()
@@ -283,6 +316,11 @@ class TestActivity : AppCompatActivity() {
         )
         val jobScheduler = this.getSystemService(Context.JOB_SCHEDULER_SERVICE) as JobScheduler
         jobScheduler.schedule(exerciseJobBuilder.build())
+    }
+
+    fun goToMenuActivity() {
+        val intent = Intent(this@TestActivity, MenuActivity::class.java)
+        // Может надо сюда ещё что-то дописать
     }
 
 }

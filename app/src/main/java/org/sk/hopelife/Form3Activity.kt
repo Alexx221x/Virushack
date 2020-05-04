@@ -107,7 +107,7 @@ class Form3Activity : AppCompatActivity() {
                                 info[4].toString().toInt(), info[5].toString().toInt(), info[6].toString(), info[7].toString(),
                                 relativies, disies, drugs, doctor, presure, freq)
 
-                JSONHelper.loadUserToFireBase(user)
+                    JSONHelper.loadUserToFireBase(user)
 
                 val intent = Intent(this, COVIDTestAcrivity::class.java).apply {
                     flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
